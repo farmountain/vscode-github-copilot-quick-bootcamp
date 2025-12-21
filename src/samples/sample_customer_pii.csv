@@ -1,0 +1,6 @@
+customer_id,full_name,email,phone,ssn,date_of_birth,address
+CUST001,John Doe,john.doe@example.com,555-123-4567,123-45-6789,1985-03-15,123 Main St
+CUST002,Jane Smith,jane.smith@email.com,555-987-6543,987-65-4321,1990-07-22,456 Oak Ave
+CUST003,Bob Johnson,bob.j@company.org,555-246-8135,456-78-9012,1978-11-30,789 Pine Rd
+CUST004,Alice Williams,alice.w@domain.com,555-369-2580,321-54-9876,1995-02-14,321 Elm St
+CUST005,Charlie Brown,charlie.brown@mail.net,555-147-2589,654-32-1098,1982-09-08,654 Maple Dr

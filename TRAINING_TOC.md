@@ -69,79 +69,108 @@
 
 ---
 
-## Day 2: Advanced Patterns with Model Context Protocol (MCP)
+## Day 2: Agent Workflows (VS Code + Copilot Chat + Agent Mode + Copilot CLI)
 
-**Goal**: Extend AI capabilities with MCP servers for banking-specific workflows.
+**Goal**: Run agentic workflows end-to-end: **plan → implement across multiple files → run test loops → refactor safely → automate via Copilot CLI → document/runbook**. Banking-grade patterns with NO MCP.
 
 ### Day 2 Overview
-* **Coming soon**: Day 2 materials (advanced MCP integration)
+* **[Day 2 README](day2_agent_workflows/README.md)** - Complete Day 2 guide and schedule
 
-### Planned Topics
+### Sessions
 
-1. **Session 2.1: Introduction to Model Context Protocol**
-   - What is MCP and why it matters
-   - MCP architecture (client, server, transport)
-   - Banking use cases for MCP
+1. **[Session 2.1: Agent Planning & Task Breakdown](day2_agent_workflows/session2_1_agent_planning_and_task_breakdown.md)** (09:00–10:30)
+   - From epics to tasks to acceptance criteria
+   - Agent Mode as a contractor (Feynman model)
+   - The Epic → Task decomposition recipe
+   - Paul–Elder framework applied to prompts
+   - Stop points for incremental review
+   - Micro-exercise: decompose a feature
 
-2. **Session 2.2: Working with MCP Servers**
-   - Installing and configuring MCP servers
-   - Using pre-built MCP servers
-   - Integrating MCP with Copilot
+2. **[Session 2.2: Multi-File Refactor + Test Loops](day2_agent_workflows/session2_2_multi_file_refactor_and_test_loops.md)** (10:45–12:15)
+   - Why multi-file changes break + safety net pattern
+   - Refactoring as rewiring a house (Feynman model)
+   - The refactoring recipe with Agent Mode
+   - Red-green-refactor cycle with test loops
+   - Live demo: refactor Day 1 code safely
+   - Hands-on exercise: refactor a module
 
-3. **Session 2.3: Building Custom MCP Servers**
-   - MCP server basics
-   - Creating banking-specific MCP tools
-   - Testing and deploying MCP servers
+3. **[Session 2.3: CLI Automation with GitHub Copilot CLI](day2_agent_workflows/session2_3_cli_automation_with_copilot_cli.md)** (Integrated throughout)
+   - Introduction to `gh copilot suggest` and `gh copilot explain`
+   - Safe CLI exercises (find, test, diff, count)
+   - Workflow integration (test → commit automation)
+   - Safety guidelines (what to automate, what to review)
+   - Building test automation scripts
 
-### Planned Labs
+### Hands-On Labs
 
-1. **Lab 3: Document Analysis with MCP**
-   - Use MCP to analyze policy documents
-   - Extract compliance requirements
-   - Generate validation rules
+1. **[Lab 3: AML Alert Triage Pipeline](day2_agent_workflows/labs/lab3_aml_alert_triage_pipeline.md)** (13:30–15:30)
+   - Build automated AML alert triage system
+   - Implement deterministic heuristic rules (HIGH_VELOCITY, ROUND_AMOUNT, HIGH_AMOUNT, RAPID_REVERSAL)
+   - Score alerts and assign triage priority (P1/P2/P3)
+   - Generate audit-friendly outputs (JSON alerts, CSV queue, summary)
+   - Multi-module implementation: schemas, rules, triage, pipeline, CLI
+   - Test loops and determinism verification
 
-2. **Lab 4: Custom MCP Server for Banking Workflows**
-   - Build an MCP server for transaction enrichment
-   - Integrate with existing systems
-   - Add custom tools for banking operations
+2. **[Lab 4: PII Masking/Tokenization + Audit Logging](day2_agent_workflows/labs/lab4_pii_masking_and_audit_logging.md)** (15:45–17:15)
+   - Build PII protection library
+   - Implement masking functions (email, phone, national ID, address, DOB)
+   - Implement deterministic tokenization (HMAC-based)
+   - Field redaction and allowlisting
+   - Audit logging without storing raw PII
+   - Multi-mode CLI (MASK, TOKENIZE, REDACT)
+
+### Reference Materials
+
+* **[Day 2 Prompts Document](day2_agent_workflows/prompts/day2_prompts.md)** - All copy-paste prompts for labs
+  - Session 2.1 micro-exercise prompts
+  - Session 2.2 refactoring exercise prompts
+  - Lab 3 prompts (schemas, rules, triage, I/O, pipeline, CLI)
+  - Lab 4 prompts (config, masking, tokenization, redaction, audit, CLI)
+  - General-purpose prompts (explain, test generation, security review)
 
 ---
 
-## Day 3: Real-World Banking Workflows
+## Day 3: Capstone — Credit Decisioning Slice (VS Code + Copilot Chat + Agent Mode + Copilot CLI)
 
-**Goal**: Apply AI-assisted development to realistic banking scenarios.
+**Goal**: Deliver a **mini end-to-end system slice** with clear architecture, requirements traceability, implementation across multiple modules, tests, audit trail, decision explainability, deterministic behavior, runbook, threat model, risk register, and reproducible demo.
 
 ### Day 3 Overview
-* **Coming soon**: Day 3 materials (real-world applications)
+* **[Day 3 README](day3_capstone/README.md)** - Complete Day 3 guide and schedule
 
-### Planned Topics
+### Core Materials
 
-1. **Session 3.1: Code Migration and Refactoring**
-   - Migrating legacy systems with AI assistance
-   - Large-scale refactoring patterns
-   - Maintaining compliance during migration
+* **[Capstone Overview](day3_capstone/capstone_overview.md)** - System vision, high-level architecture, key components
+* **[Capstone Requirements](day3_capstone/capstone_requirements.md)** - Functional/non-functional requirements, API contracts, decision rules, acceptance criteria, requirements traceability matrix
+* **[Capstone Architecture](day3_capstone/capstone_architecture.md)** - Component architecture, data flow diagrams, data model, technology stack, design patterns
+* **[Capstone Runbook](day3_capstone/capstone_runbook.md)** - Installation, configuration, running the service, verification steps, troubleshooting, evidence bundle creation
 
-2. **Session 3.2: Integration Patterns**
-   - Integrating AI-generated code with existing systems
-   - API design and documentation
-   - Error handling and resilience
+### Governance Artifacts
 
-3. **Session 3.3: Production Readiness**
-   - Deployment strategies
-   - Monitoring and observability
-   - Compliance documentation
+* **[Threat Model](day3_capstone/threat_model.md)** - Attack surfaces, threat scenarios, mitigations, verification
+* **[Risk Register](day3_capstone/risk_register.md)** - Risk descriptions, likelihood/impact ratings, mitigation strategies
 
-### Planned Labs
+### Lab
 
-1. **Lab 5: Migrate a Legacy Service**
-   - Modernize an old codebase
-   - Maintain behavior while improving structure
-   - Add tests and documentation
+* **[Lab: Build Credit Decisioning Slice](day3_capstone/labs/capstone_build_credit_decisioning_slice.md)** (13:30–16:30)
+  - Build FastAPI REST service (5 endpoints)
+  - Implement deterministic decision engine with reason codes
+  - Create audit logging (JSONL format, no raw PII)
+  - Build repository layer (SQLite or file-based JSON)
+  - Generate synthetic sample data
+  - Write comprehensive test suite (unit + API + end-to-end)
+  - Create end-to-end demo script
+  - Package evidence bundle for audit review
 
-2. **Lab 6: Build a Complete Banking Feature**
-   - End-to-end feature development
-   - Multi-service integration
-   - Production-ready documentation
+### Reference Materials
+
+* **[Day 3 Copilot Agent Prompts](day3_capstone/prompts/day3_prompts.md)** - All copy-paste prompts for capstone
+  - Prompt D3-1: Implement capstone code (modules a-n)
+  - Prompt D3-2: Generate governance artifacts
+  - Prompt D3-3: Add VS Code tasks
+  - Prompt D3-4: Create evidence bundle
+  - Prompt D3-5: Update training TOC
+  - GitHub Copilot CLI exercises (6 safe commands)
+  - Troubleshooting prompts
 
 ---
 
@@ -229,19 +258,33 @@ Use this checklist to track your progress through the bootcamp:
 - [ ] Completed Session 1.3 (Verification and Testing)
 - [ ] Day 1 Reflexion completed
 
-### Day 2: Advanced Patterns (Coming Soon)
-- [ ] Completed Session 2.1
-- [ ] Completed Session 2.2
-- [ ] Completed Session 2.3
-- [ ] Completed Lab 3
-- [ ] Completed Lab 4
+### Day 2: Agent Workflows
+- [ ] Completed Session 2.1 (Agent Planning & Task Breakdown)
+- [ ] Completed Session 2.2 (Multi-File Refactor + Test Loops)
+- [ ] Completed Session 2.3 (CLI Automation with Copilot CLI)
+- [ ] Completed Lab 3 (AML Alert Triage Pipeline)
+  - [ ] All modules implemented
+  - [ ] All tests passing
+  - [ ] Determinism verified
+- [ ] Completed Lab 4 (PII Masking/Tokenization + Audit Logging)
+  - [ ] All masking functions working
+  - [ ] Tokenization verified
+  - [ ] Audit log excluding PII
+- [ ] Day 2 Reflexion completed
 
-### Day 3: Real-World Workflows (Coming Soon)
-- [ ] Completed Session 3.1
-- [ ] Completed Session 3.2
-- [ ] Completed Session 3.3
-- [ ] Completed Lab 5
-- [ ] Completed Lab 6
+### Day 3: Capstone — Credit Decisioning Slice
+- [ ] Reviewed Capstone Overview
+- [ ] Reviewed Capstone Requirements
+- [ ] Reviewed Capstone Architecture
+- [ ] Completed Capstone Lab (Build Credit Decisioning Slice)
+  - [ ] All 5 API endpoints implemented
+  - [ ] Decision engine with reason codes working
+  - [ ] Audit log excluding PII verified
+  - [ ] All tests passing (unit + API + E2E)
+  - [ ] Evidence bundle created
+- [ ] Reviewed Threat Model
+- [ ] Reviewed Risk Register
+- [ ] Day 3 Reflexion completed
 
 ---
 
@@ -258,17 +301,21 @@ By the end of this bootcamp, you should be able to:
 - [x] Apply verification and reflexion techniques
 - [x] Create audit-ready documentation and evidence
 
-### Day 2 Outcomes (Coming Soon)
-- [ ] Understand Model Context Protocol architecture
-- [ ] Install and configure MCP servers
-- [ ] Build custom MCP tools for banking workflows
-- [ ] Integrate MCP with existing systems
+### Day 2 Outcomes
+- [x] Plan and decompose features using agent-friendly prompts
+- [x] Execute multi-file refactors safely with test loops
+- [x] Automate workflows using GitHub Copilot CLI
+- [x] Build banking-grade systems with deterministic behavior
+- [x] Implement comprehensive audit logging without PII leakage
+- [x] Write test suites that verify critical safety properties
 
-### Day 3 Outcomes (Coming Soon)
-- [ ] Migrate legacy code with AI assistance
-- [ ] Build production-ready features end-to-end
-- [ ] Apply AI-assisted development to real banking workflows
-- [ ] Create complete compliance documentation
+### Day 3 Outcomes
+- [x] Build mini end-to-end system slices from requirements to evidence
+- [x] Implement deterministic decision engines with explainability
+- [x] Create audit-ready documentation (requirements traceability, architecture, runbook)
+- [x] Generate governance artifacts (threat models, risk registers)
+- [x] Package evidence bundles for compliance review
+- [x] Apply banking-grade engineering practices end-to-end
 
 ---
 
