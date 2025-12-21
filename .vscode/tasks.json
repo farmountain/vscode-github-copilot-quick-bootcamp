@@ -1,0 +1,233 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // ========================================
+    // Day 3 Capstone Tasks
+    // ========================================
+    {
+      "label": "Day3: Generate Sample Applications",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "src.day3.credit_decisioning.sample_data"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": "none"
+    },
+    {
+      "label": "Day3: Run Capstone API Server",
+      "type": "shell",
+      "command": "uvicorn",
+      "args": [
+        "src.day3.credit_decisioning.app:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000",
+        "--reload"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true
+      },
+      "group": "none"
+    },
+    {
+      "label": "Day3: Run Capstone Tests",
+      "type": "shell",
+      "command": "pytest",
+      "args": [
+        "tests/day3/",
+        "-v"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Day3: Run E2E Demo Script",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "src.day3.credit_decisioning.demo_e2e"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": "none"
+    },
+    {
+      "label": "Day3: Run Tests with Coverage",
+      "type": "shell",
+      "command": "pytest",
+      "args": [
+        "tests/day3/",
+        "-v",
+        "--cov=src.day3.credit_decisioning",
+        "--cov-report=term-missing",
+        "--cov-report=html:out/day3/coverage"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Day3: Verify All (Composite)",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Day3: Generate Sample Applications",
+        "Day3: Run Capstone Tests"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    // ========================================
+    // Day 1 & Day 2 Tasks (Example placeholders)
+    // ========================================
+    {
+      "label": "Day1: Run Data Quality CLI",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "src.day1.data_quality.cli",
+        "--help"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": "none"
+    },
+    {
+      "label": "Day1: Run Risk Scoring CLI",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "src.day1.risk_scoring.cli",
+        "--help"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": "none"
+    },
+    {
+      "label": "Day2: Run AML Triage CLI",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "src.day2.aml_triage.cli",
+        "--help"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": "none"
+    },
+    {
+      "label": "Day2: Run PII Protection CLI",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "src.day2.pii_protection.cli",
+        "--help"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": "none"
+    },
+    // ========================================
+    // General Test Tasks
+    // ========================================
+    {
+      "label": "Run All Tests",
+      "type": "shell",
+      "command": "pytest",
+      "args": [
+        "tests/",
+        "-v"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
+}

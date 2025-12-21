@@ -1,0 +1,74 @@
+[
+  {
+    "application_id": "APP001",
+    "credit_score": 780,
+    "annual_income": 95000,
+    "monthly_debt_payments": 1200,
+    "employment_status": "FULL_TIME",
+    "years_employed": 5.5,
+    "requested_amount": 25000
+  },
+  {
+    "application_id": "APP002",
+    "credit_score": 620,
+    "annual_income": 45000,
+    "monthly_debt_payments": 1800,
+    "employment_status": "FULL_TIME",
+    "years_employed": 2.0,
+    "requested_amount": 15000
+  },
+  {
+    "application_id": "APP003",
+    "credit_score": 720,
+    "annual_income": 68000,
+    "monthly_debt_payments": 800,
+    "employment_status": "SELF_EMPLOYED",
+    "years_employed": 4.0,
+    "requested_amount": 30000
+  },
+  {
+    "application_id": "APP004",
+    "credit_score": 580,
+    "annual_income": 28000,
+    "monthly_debt_payments": 1500,
+    "employment_status": "PART_TIME",
+    "years_employed": 1.5,
+    "requested_amount": 10000
+  },
+  {
+    "application_id": "APP005",
+    "credit_score": 810,
+    "annual_income": 125000,
+    "monthly_debt_payments": 2000,
+    "employment_status": "FULL_TIME",
+    "years_employed": 8.0,
+    "requested_amount": 50000
+  },
+  {
+    "application_id": "APP006",
+    "credit_score": 670,
+    "annual_income": 52000,
+    "monthly_debt_payments": 900,
+    "employment_status": "FULL_TIME",
+    "years_employed": 0.5,
+    "requested_amount": 20000
+  },
+  {
+    "application_id": "APP007",
+    "credit_score": 640,
+    "annual_income": 38000,
+    "monthly_debt_payments": 600,
+    "employment_status": "SELF_EMPLOYED",
+    "years_employed": 1.0,
+    "requested_amount": 12000
+  },
+  {
+    "application_id": "APP008",
+    "credit_score": 550,
+    "annual_income": 22000,
+    "monthly_debt_payments": 800,
+    "employment_status": "UNEMPLOYED",
+    "years_employed": 0.0,
+    "requested_amount": 5000
+  }
+]
