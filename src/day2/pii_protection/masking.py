@@ -141,8 +141,8 @@ def mask_date_of_birth(dob: str) -> str:
     Returns:
         Masked date of birth
     """
-    # Try to extract year (last 4 digits)
-    year_match = re.search(r'(\d{4})$', dob)
+    # Try to extract year - look for 4 consecutive digits anywhere in the string
+    year_match = re.search(r'(\d{4})', dob)
     
     if year_match:
         year = year_match.group(1)
